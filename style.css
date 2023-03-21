@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter','Roboto', 'sans-serif';
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.archive-img{
+    height: 250px;
+    max-width: 600px;
+}
+
+footer{
+    background-color: #282828;
+    color: rgb(207, 207, 207);
+}
