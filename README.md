@@ -4,6 +4,10 @@
 
 This single page application (SPA) is built using HTML, CSS, vanila JavaScript, and Bootstrap, based on the core concepts of React. The application uses JavaScript history API to manage navigation between different sections of the application, without reloading the page.
 
+
+[Deploy Link](https://641af704ac713903144a8daa--gleeful-pasca-ed4eba.netlify.app/) 
+
+
 ### Getting started
 To get started with the application, simply clone the repository to your local machine, and open the index.html file in your web browser. The application should load automatically, and you should be able to navigate between different sections of the application using the navigation links.
 
