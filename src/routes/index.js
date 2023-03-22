@@ -1,8 +1,9 @@
 
-
-
+// title of the page
 const urlPageTitle = "Alex turnwall";
 
+
+// event listener for nav links
 document.addEventListener("click",(e)=>{
     if(!e.target.matches("li a")){
         return;
@@ -12,7 +13,9 @@ document.addEventListener("click",(e)=>{
 })
 
 
+// create a function that watches the url and calls the urlLocationHandler
 const urlRoute=(event)=>{
+    
     event =event || window.event;
   
     event.preventDefault();
@@ -23,55 +26,58 @@ const urlRoute=(event)=>{
 }
 
 
+// Routes
 const urlRoutes={
     404:{
-        page: "/pages/404.html",
+        page: "./pages/404.html",
         title:"404 | "+urlPageTitle
     },
     "/":{
-        page: "/pages/home.html",
+        page: "./src/pages/home.html",
         title:"Home | "+urlPageTitle
     },
     "/work":{
-        page: "/pages/work.html",
+        page: "./src/pages/work.html",
         title:"Work | "+urlPageTitle
     },
     "/about":{
-        page: "/pages/about.html",
+        page: "./src/pages/about.html",
         title:"about | "+urlPageTitle
     },
     "/blog":{
-        page: "/pages/blog.html",
+        page: "./src/pages/blog.html",
         title:"blog | "+urlPageTitle
     },
     "/images":{
-        page: "/pages/images.html",
+        page: "./src/pages/images.html",
         title:"images | "+urlPageTitle
     }
 }
 
-
+// change content according location path
 const urlLocationHandler=async()=>{
     const location=window.location.pathname;
 
     if(location.length==0){
         location="/";
     }
-
+    console.log(location.length);
+console.log(window.location.pathname);
 
     const route=urlRoutes[location] || urlRoutes[404];
-
+console.log(route);
+    // html content of file
     const html=await fetch(route.page).then((Response)=> Response.text());
-
+    // change middle content of main file
     document.getElementById("content").innerHTML=html;
-
+    // change title
     document.title = route.title;
-
-
 
 };
 
+
+// add an event listener to the window that watches for url changes
 window.onpopstate=urlLocationHandler();
 // window.route=urlRoute();
-
+// call the urlLocationHandler function to handle the initial url
 urlLocationHandler();
