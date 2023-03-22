@@ -61,12 +61,8 @@ const urlLocationHandler=async()=>{
     if(location.length==0){
         location="/";
     }
-    
-    console.log(location.length);
-console.log(window.location.pathname);
 
     const route=urlRoutes[location] || urlRoutes[404];
-console.log(route);
     // html content of file
     const html=await fetch(route.page).then((Response)=> Response.text());
     // change middle content of main file
@@ -79,6 +75,6 @@ console.log(route);
 
 // add an event listener to the window that watches for url changes
 window.onpopstate=urlLocationHandler();
-// window.route=urlRoute();
+
 // call the urlLocationHandler function to handle the initial url
 urlLocationHandler();
