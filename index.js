@@ -1,6 +1,8 @@
 
 
 
+const urlPageTitle = "Alex turnwall";
+
 document.addEventListener("click",(e)=>{
     if(!e.target.matches("li a")){
         return;
@@ -24,23 +26,23 @@ const urlRoute=(event)=>{
 const urlRoutes={
     404:{
         page: "/pages/404.html",
-        title:"404 | "
+        title:"404 | "+urlPageTitle
     },
     "/":{
         page: "/pages/home.html",
-        title:"404 | "
+        title:"Home | "+urlPageTitle
     },
     "/work":{
         page: "/pages/work.html",
-        title:"404 | "
+        title:"Work | "+urlPageTitle
     },
     "/about":{
         page: "/pages/about.html",
-        title:"404 | "
+        title:"about | "+urlPageTitle
     },
     "/blog":{
         page: "/pages/blog.html",
-        title:"404 | "
+        title:"blog | "+urlPageTitle
     }
 }
 
@@ -58,6 +60,8 @@ const urlLocationHandler=async()=>{
     const html=await fetch(route.page).then((Response)=> Response.text());
 
     document.getElementById("content").innerHTML=html;
+
+    document.title = route.title;
 
 
 
