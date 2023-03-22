@@ -45,3 +45,9 @@ footer{
     border-radius: 5px;
 
 }
+
+
+.pos-sticky{
+    position: sticky;
+    top: 50px;
+}
