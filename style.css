@@ -30,8 +30,13 @@ footer{
 }
 
 .work-case-study-image{
-    height: 350px;
-    max-width: 750px;
+    height: 320px;
+    max-width: 700px;
+    transition: 1s;
+}
+
+.work-case-study-image:hover{
+    transform: scale(1.02);
 }
 
 .work-archive-oddities-div{
@@ -46,8 +51,21 @@ footer{
 
 }
 
-
 .pos-sticky{
     position: sticky;
     top: 50px;
+}
+
+.carousel-item img{
+    max-height: 600px;
+    filter: brightness(40%);
+    min-width: 900px;
+}
+.carousel-caption{
+    top: 30%;
+    bottom: 30%;
+    padding: 0;
+    right: 20%;
+    left: 20%;
+    text-align: unset;
 }

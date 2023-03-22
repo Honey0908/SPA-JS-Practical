@@ -43,6 +43,10 @@ const urlRoutes={
     "/blog":{
         page: "/pages/blog.html",
         title:"blog | "+urlPageTitle
+    },
+    "/images":{
+        page: "/pages/images.html",
+        title:"images | "+urlPageTitle
     }
 }
 
