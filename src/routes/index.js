@@ -29,7 +29,7 @@ const urlRoute=(event)=>{
 // Routes
 const urlRoutes={
     404:{
-        page: "./pages/404.html",
+        page: "./src/pages/404.html",
         title:"404 | "+urlPageTitle
     },
     "/":{
@@ -61,6 +61,7 @@ const urlLocationHandler=async()=>{
     if(location.length==0){
         location="/";
     }
+    
     console.log(location.length);
 console.log(window.location.pathname);
 
