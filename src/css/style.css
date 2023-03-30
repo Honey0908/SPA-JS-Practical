@@ -1,0 +1,84 @@
+
+/* reset classes */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter','Roboto', 'sans-serif';
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* utility classes */
+.pos-sticky{
+    position: sticky;
+    top: 50px;
+}
+
+/* custom classes */
+/*  common footer-index.html file */
+
+footer{
+    background-color: #282828;
+    color: rgb(207, 207, 207);
+}
+
+/* work page */
+.archive-img{
+    height: 250px;
+    max-width: 600px;
+}
+.work-case-study-image{
+    height: 320px;
+    max-width: 700px;
+    transition: 1s;
+}
+
+.work-case-study-image:hover{
+    transform: scale(1.02);
+}
+
+.work-archive-oddities-div{
+    filter: grayscale(1);
+    transition: 1s;
+}
+.work-archive-oddities-div:hover{
+    filter: grayscale(0);
+    background-color: white;
+    box-shadow: 2px 2px 6px rgb(199, 199, 199);
+    border-radius: 5px;
+}
+
+
+/* blog page */
+.blog-img{
+    max-height: 220px;
+    max-width: 350px;
+}
+
+/* about page */
+.about-img{
+    max-height: 300px;
+    max-width: 250px;
+}
+
+
+/* images page */
+.carousel-item img{
+    max-height: 600px;
+    filter: brightness(40%);
+    min-width: 900px;
+}
+.carousel-caption{
+    top: 30%;
+    bottom: 30%;
+    padding: 0;
+    right: 20%;
+    left: 20%;
+    text-align: unset;
+}
